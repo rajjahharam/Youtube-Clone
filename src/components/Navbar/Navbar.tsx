@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Search, X, Play, Menu } from "lucide-react";
+import { Search, X, Menu } from "lucide-react";
 import { useAppDispatch } from "../../app/hooks";
 import {
   setQuery,

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { ThumbsUp, Bell, ChevronDown, ChevronUp } from "lucide-react";
+import { ThumbsUp, ChevronDown, ChevronUp } from "lucide-react";
 import { useAppDispatch, useAppSelector } from "../../app/hooks";
 import { fetchVideoById } from "../../features/videos/videosSlice";
 import {
