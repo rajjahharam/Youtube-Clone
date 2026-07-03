@@ -50,7 +50,7 @@ const Sidebar = ({ isOpen, onClose }: SidebarProps) => {
         <div className="fixed inset-0 bg-black/60 z-40 md:hidden" onClick={onClose} />
       )}
 
-      <aside className={`fixed top-14 left-0 w-[240px] h-[calc(100vh-56px)] bg-black py-3 overflow-y-auto z-50 transition-transform duration-200 border-r border-neutral-800
+      <aside className={`fixed top-14 left-0 w-60 h-[calc(100vh-56px)] bg-black py-3 overflow-y-auto z-50 transition-transform duration-200 border-r border-neutral-800
         ${isOpen ? "translate-x-0" : "-translate-x-full"} md:translate-x-0`}>
         
         <div className="px-3 space-y-1">
@@ -61,7 +61,7 @@ const Sidebar = ({ isOpen, onClose }: SidebarProps) => {
               <div
                 key={item.label}
                 onClick={() => handleClick(item.path, item.label)}
-                className={`flex items-center gap-6 px-4 py-[10px] mx-1 rounded-xl cursor-pointer text-sm transition-all
+                className={`flex items-center gap-6 px-4 py-2.5 mx-1 rounded-xl cursor-pointer text-sm transition-all
                   ${isActive 
                     ? "bg-neutral-800 font-medium text-white" 
                     : "hover:bg-neutral-900 text-neutral-300 hover:text-white"
@@ -85,7 +85,7 @@ const Sidebar = ({ isOpen, onClose }: SidebarProps) => {
               <div
                 key={index}
                 onClick={() => handleClick(null, item.label)}
-                className="flex items-center gap-6 px-4 py-[10px] mx-1 rounded-xl cursor-pointer text-sm text-neutral-300 hover:bg-neutral-900 hover:text-white transition-all"
+                className="flex items-center gap-6 px-4 py-2.5 mx-1 rounded-xl cursor-pointer text-sm text-neutral-300 hover:bg-neutral-900 hover:text-white transition-all"
               >
                 <span className="w-6 flex justify-center">
                   <Icon size={22} />

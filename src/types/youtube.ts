@@ -51,6 +51,9 @@ export interface VideosState {
   currentVideo: YouTubeVideo | null;
   loading: boolean;
   error: string | null;
+  shortsLoadingMore: boolean;
+  shortsNextPageToken: string | null;
+  shortsHasMore: boolean;
 }
 
 export interface SearchState {

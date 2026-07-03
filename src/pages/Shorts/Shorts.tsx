@@ -243,7 +243,7 @@ const Shorts = () => {
             {/* Bound by HEIGHT first (h-full), width derives from the 9:16
                 ratio via w-auto — prevents the box exceeding the viewport
                 height and bleeding into the next snap section. */}
-            <div className="h-full max-h-full w-auto max-w-full aspect-[9/16] mx-auto rounded-xl overflow-hidden bg-black relative">
+            <div className="h-full max-h-full w-auto max-w-full aspect-9/16 mx-auto rounded-xl overflow-hidden bg-black relative">
               {isActive ? (
                 <ShortPlayer videoId={videoId} apiReady={apiReady} />
               ) : (
@@ -253,7 +253,7 @@ const Shorts = () => {
                   className="w-full h-full object-cover"
                 />
               )}
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-3 pointer-events-none">
+              <div className="absolute bottom-0 left-0 right-0 bg-linear-to-t from-black/80 to-transparent p-3 pointer-events-none">
                 <h3 className="text-sm font-medium text-white line-clamp-2">
                   {short.snippet.title}
                 </h3>
