@@ -65,30 +65,36 @@ const VideoCard = ({ video }: VideoCardProps) => {
       className="cursor-pointer group"
       onClick={() => navigate(`/watch/${videoId}`)}
     >
-      {/* Thumbnail */}
-      <div className="relative w-full aspect-video rounded-xl overflow-hidden bg-neutral-800">
+      {/* Thumbnail Container */}
+      <div className="relative w-full aspect-video rounded-xl overflow-hidden bg-neutral-800 mb-3 transition-all duration-300 group-hover:scale-[1.02] group-hover:shadow-2xl">
         <img
           src={thumbnailUrl}
           alt={title}
-          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-200"
+          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+          loading="lazy"
         />
         {duration && (
-          <span className="absolute bottom-1 right-1 bg-black/80 text-white text-xs px-1.5 py-0.5 rounded">
+          <span className="absolute bottom-2 right-2 bg-black/90 text-white text-[10px] font-medium px-1.5 py-px rounded tracking-tight">
             {duration}
           </span>
         )}
       </div>
 
-      {/* Info */}
-      <div className="flex gap-3 mt-3">
-        <div className="w-9 h-9 rounded-full bg-neutral-700 flex-shrink-0 flex items-center justify-center text-xs font-semibold">
+      {/* Video Info */}
+      <div className="flex gap-3">
+        <div className="w-9 h-9 rounded-full bg-neutral-700 flex-shrink-0 flex items-center justify-center text-sm font-semibold mt-0.5 transition-transform group-hover:scale-110">
           {channelTitle.charAt(0).toUpperCase()}
         </div>
+
         <div className="flex-1 min-w-0">
-          <h3 className="text-sm font-medium text-white line-clamp-2 leading-snug">
+          <h3 className="text-sm font-medium text-white line-clamp-2 leading-snug group-hover:text-blue-400 transition-colors">
             {title}
           </h3>
-          <p className="text-xs text-neutral-400 mt-1">{channelTitle}</p>
+          
+          <p className="text-xs text-neutral-400 mt-2.5 line-clamp-1">
+            {channelTitle}
+          </p>
+          
           <p className="text-xs text-neutral-400">
             {views && `${views} • `}
             {formatTimeAgo(publishedAt)}

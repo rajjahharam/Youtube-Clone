@@ -48,6 +48,7 @@ export interface YouTubeSearchItem {
 export interface VideosState {
   allVideos: YouTubeVideo[];
   shorts: YouTubeSearchItem[];
+  currentVideo: YouTubeVideo | null;
   loading: boolean;
   error: string | null;
 }
